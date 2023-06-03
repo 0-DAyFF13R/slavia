@@ -19,12 +19,12 @@
 
         <!-- Header -->
 
-        <header class="header">
+        <header class="header header_dark">
             <div class="container">
                 <div class="header__inner">
                     <h2 class="header__logo">Slavia</h2>
-                    <div class="header__links">
-                        <nav>
+                    <div class="header__nav-block">
+                        <nav class="header__nav">
                             <a class="header__nav-link  header__nav-link_active" href="#">Home</a>
                             <a class="header__nav-link" href="#">About</a>
                             <a class="header__nav-link" href="#">Shop</a>
@@ -32,8 +32,8 @@
                             <a class="header__nav-link" href="#">Contact</a>
                         </nav>
                         <div>
-                            <a class="header__nav-search" href="#"><img src="assets/search.svg" alt=""></a>
-                            <a href="#"><img src="assets/shop.svg" alt=""></a>
+                            <a class="header__nav-search  header__ico-filter" href="#"><img src="assets/search.svg" alt=""></a>
+                            <a class="header__ico-filter" href="#"><img src="assets/shop.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
 
 
 
-        <!-- shop -->
+        <!-- Shop -->
 
         <section class="section  shop-margin-bottom">
             <div class="container">
@@ -271,11 +271,11 @@
                         <p class="section__subtitle  events__subtitle">Join us for an evening of exquisite wines, fine food, and great company at our wine tasting event.</p>
                     </div>
                     <div class="events__inner">
-                        <div class="events__inner-block">
+                        <div class="events__block">
                             <div>
                                 <img src="assets/events/events__img-bordeaux.png" alt="">
                             </div>
-                            <div class="events__inner-block-text">
+                            <div class="events__block-text">
                                 <h3>Bordeaux <span class="bold-text">Wine Festival</span></h3>
                                 <div class="marker-block">
                                     <img src="assets/events/marker.png" alt="">
@@ -285,11 +285,11 @@
                                 <a class="events__inner-link" href="#">Read <span class="bold-text">More</span></a>
                             </div>
                         </div>
-                        <div class="events__inner-block">
+                        <div class="events__block">
                             <div>
                                 <img src="assets/events/events__img-new-york.png" alt="">
                             </div>
-                            <div class="events__inner-block-text">
+                            <div class="events__block-text">
                                 <h3>Spectator <span class="bold-text">Wine Expe.</span></h3>
                                 <div class="marker-block">
                                     <img src="assets/events/marker.png" alt="">
@@ -299,11 +299,11 @@
                                 <a class="events__inner-link" href="#">Read <span class="bold-text">More</span></a>
                             </div>
                         </div>
-                        <div class="events__inner-block">
+                        <div class="events__block">
                             <div>
                                 <img src="assets/events/events__img-napa.png" alt="">
                             </div>
-                            <div class="events__inner-block-text">
+                            <div class="events__block-text">
                                 <h3>Napa Valley <span class="bold-text">Wine Train</span></h3>
                                 <div class="marker-block">
                                     <img src="assets/events/marker.png" alt="">
@@ -313,17 +313,17 @@
                                 <a class="events__inner-link" href="#">Read <span class="bold-text">More</span></a>
                             </div>
                         </div>
-                        <div class="events__inner-block">
+                        <div class="events__block">
                             <div>
                                 <img src="assets/events/events__img-bordeaux-vinexpo.png" alt="">
                             </div>
-                            <div class="events__inner-block-text">
+                            <div class="events__block-text">
                                 <h3>Vinexpo <span class="bold-text">Wine Festival</span></h3>
                                 <div class="marker-block">
                                     <img src="assets/events/marker.png" alt="">
                                     <p>Bordeaux, France </p>
                                 </div>
-                                <p class="events__inner-block-subtitle">It features exhibitors from over 40 countries and includes tastings and networking events.</p>
+                                <p class="events__block-subtitle">It features exhibitors from over 40 countries and includes tastings and networking events.</p>
                                 <a class="events__inner-link" href="#">Read <span class="bold-text">More</span></a>
                             </div>
                         </div>
@@ -397,35 +397,70 @@
         <footer class="relative">
             <div class="container">
                 <div class="footer">
-                    <div >
-                        <h2>Slavia</h2>
-                        <p>Our journey in the wine industry began with shared love for their complexities & nuances of different varietals.</p>
-                        <div>
-                            <a href="#"><img src="assets/footer/footer__facebook.png" alt=""></a>
-                            <a href="#"><img src="assets/footer/footer__insta.png" alt=""></a>
-                            <a href="#"><img src="assets/footer/footer__in.png" alt=""></a>
-                            <a href="#"><img src="assets/footer/footer__twitter.png" alt=""></a>
+                    <div class="footer__inner">
+                        <div class="footer__block">
+                            <h2>Slavia</h2>
+                            <p>Our journey in the wine industry began with shared love for their complexities & nuances of different varietals.</p>
+                            <div class="footer__social-media-block">
+                                <a class="footer__social-media-link" href="#"><img src="assets/footer/footer__facebook.png" alt=""></a>
+                                <a class="footer__social-media-link" href="#"><img src="assets/footer/footer__insta.png" alt=""></a>
+                                <a class="footer__social-media-link" href="#"><img src="assets/footer/footer__in.png" alt=""></a>
+                                <a class="footer__social-media-link" href="#"><img src="assets/footer/footer__twitter.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="footer__block">
+                            <h2>Quick Links</h2>
+                            <nav class="footer__nav">
+                                <a href="#">Home</a>
+                                <a href="#">About</a>
+                                <a href="#">Shop</a>
+                                <a href="#">Events</a>
+                                <a href="#">Contact</a>
+                            </nav>
+                        </div>
+                        <div class="footer__block">
+                            <h2>Contact Info</h2>
+                            <div>
+                                <div class="footer__contact-block">
+                                    <img src="assets/footer/footer__nav-phone.png" alt="">
+                                    <a class="footer__link" href="tel:+11234560606">+1 123-456-0606</a>
+                                </div>
+                                <div class="footer__contact-block">
+                                    <img src="assets/footer/footer__nav-email.png" alt="">
+                                    <a class="footer__link" href="email:slaviaexa123@gmail.com">slaviaexa123@gmail.com</a>
+                                </div>
+                                <div class="footer__contact-block">
+                                    <img src="assets/footer/footer__nav-address.png" alt="">
+                                    <p>120 King St. Charleston SC 29401, USA</p>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="footer__block">
+                            <h2>Our Newsletter</h2>
+                            <p>Sign up our Newsletter and Get The Daily update and Latest information!!</p>
+                            <div class="footer__subscribe-block">
+                                <input type="email" placeholder="Enter Email" required>
+                                <button type="submit">Submit</button>
+                            </div>
                         </div>
                     </div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                    <div class="footer__under">
+                        <div class="footer__under-inner">
+                            <div>
+                                <p>© Slavia. All Right Reserved.</p>
+                            </div>
+                            <div class="footer__under-link-block">
+                                <a class="footer__under-link" href="#">Privacy Policy</a>
+                                <div class="point"></div>
+                                <a class="footer__under-link" href="#">Terms & Conditions</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="footer__background">
-                <img src="assets/footer/footer__bg.png" alt="">
-            </div>
         </footer>
-
-
-
-
-
-
-
-
     </div>
-
 
     <script src="main.js"></script>
 </body>
