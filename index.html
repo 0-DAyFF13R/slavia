@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Nunito+Sans&display=swap" rel="stylesheet">
@@ -140,12 +141,7 @@
                         <p class="section__subtitle">Our Best Wine Collection is an exquisite selection of exceptional reds, whites, and sparkling wines, crafted to perfection with precision and care.</p>
                     </div>
                     <div class="shop__inner">
-                        <div class="shop__btn-block">
-                            <button class="shop__btn">
-                                <img src="assets/shop/shop__btn-arrow-left.png" alt="">
-                            </button>
-                        </div>
-                        <div class="shop__wines">
+                        <div class="shop__wines" id="shopSlider">
                             <div class="shop__wines-product">
                                 <div class="shop__product-img-block">
                                     <img class="shop__product-img" src="assets/shop/shop__wine-bgc.png" alt="">
@@ -176,11 +172,26 @@
                                     <p>$85.00</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="shop__btn-block">
-                            <button class="shop__btn">
-                                <img src="assets/shop/shop__btn-arrow-right.png" alt="">
-                            </button>
+                            <div class="shop__wines-product">
+                                <div class="shop__product-img-block">
+                                    <img class="shop__product-img" src="assets/shop/shop__wine-bgc.png" alt="">
+                                    <img class="shop__product-img-main" src="assets/shop/shop__wine-1.png" alt="">
+                                </div>
+                                <div class="shop__product-name-block">
+                                    <h2>Levis <span class="bold-text">Wine</span></h2>
+                                    <p>$95.00</p>
+                                </div>
+                            </div>
+                            <div class="shop__wines-product">
+                                <div class="shop__product-img-block">
+                                    <img class="shop__product-img" src="assets/shop/shop__wine-bgc.png" alt="">
+                                    <img class="shop__product-img-main" src="assets/shop/shop__wine-2.png" alt="">
+                                </div>
+                                <div class="shop__product-name-block">
+                                    <h2>Loremic <span class="bold-text">Wine</span></h2>
+                                    <p>$135.00</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -337,35 +348,63 @@
 
 
 
-        <!-- FAQ -->
+        <!-- Reviews -->
 
         <section class="section  relative">
             <div class="container">
-                <div class="faq">
-                    <div class="faq__man-bg">
-                        <img src="assets/faq/faq__man-bg.png" alt="">
+                <div class="reviews">
+                    <div class="reviews__man-bg">
+                        <img src="assets/reviews/reviews__man-bg.png" alt="">
                     </div>
-                    <div class="faq__inner">
-                        <h2 class="faq__inner-title">What People are Saying <span class="bold-text">About Slavia?</span></h2>
-                        <img class="faq__inner-img" src="assets/faq/faq__quote.png" alt="">
-                        <p class="faq__inner-comment">"I absolutely love shopping at Slavia ! The staff is so knowledgeable & always happy to help me find the perfect bottles. Their selection of wines is top notch and I appreciate the attention to detail they put into curating their collections. As a self proclaimed wines enthusiast, I can honestly say that Slavia is my go to spot for all thing wine. They have an impressive variety of wine from all over the world & I appreciate that they offer different price points to fit any budget. I also appreciate the personalized recommendations I receive from the staff."</p>
-                        <p class="faq__inner-autor">Jacob <span class="bold-text">William</span></p>
-                        <div class="faq__inner-rating">
-                            <img class="faq__inner-rating-star" src="assets/faq/star.png" alt="">
-                            <img class="faq__inner-rating-star" src="assets/faq/star.png" alt="">
-                            <img class="faq__inner-rating-star" src="assets/faq/star.png" alt="">
-                            <img class="faq__inner-rating-star" src="assets/faq/star.png" alt="">
-                            <img class="faq__inner-rating-star" src="assets/faq/star.png" alt="">
+                    <div class="reviews__inner">
+                        <h2 class="reviews__inner-title">What People are Saying <span class="bold-text">About Slavia?</span></h2>
+                        <div class="reviews__slider" id="reviewsSlider">
+                            <div class="reviews__item">
+                                <img class="reviews__inner-img" src="assets/reviews/reviews__quote.png" alt="">
+                                <p class="reviews__inner-comment">"I absolutely love shopping at Slavia ! The staff is so knowledgeable & always happy to help me find the perfect bottles. Their selection of wines is top notch and I appreciate the attention to detail they put into curating their collections. As a self proclaimed wines enthusiast, I can honestly say that Slavia is my go to spot for all thing wine. They have an impressive variety of wine from all over the world & I appreciate that they offer different price points to fit any budget. I also appreciate the personalized recommendations I receive from the staff."</p>
+                                <p class="reviews__inner-autor">Jacob <span class="bold-text">William</span></p>
+                                <div class="reviews__inner-rating">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <img class="reviews__inner-img" src="assets/reviews/reviews__quote.png" alt="">
+                                <p class="reviews__inner-comment">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam dolorum officiis a enim minima aut praesentium officia hic cupiditate vero, corrupti, tempora deserunt eius odit dolore quam aperiam laudantium incidunt. Eaque, omnis provident ipsam unde culpa qui placeat cumque asperiores quo explicabo quasi dolorem molestias accusamus totam doloribus at consectetur! "</p>
+                                <p class="reviews__inner-autor">David <span class="bold-text">Hill</span></p>
+                                <div class="reviews__inner-rating">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                </div>
+                            </div>
+                            <div class="reviews__item">
+                                <img class="reviews__inner-img" src="assets/reviews/reviews__quote.png" alt="">
+                                <p class="reviews__inner-comment">"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam dolorum officiis a enim minima aut praesentium officia hic cupiditate vero, corrupti, tempora deserunt eius odit dolore quam aperiam laudantium incidunt. Eaque, omnis provident ipsam Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, doloremque!!!"</p>
+                                <p class="reviews__inner-autor">Matthew <span class="bold-text">Brown</span></p>
+                                <div class="reviews__inner-rating">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star-nonactive" src="assets/reviews/star.png" alt="">
+                                </div>
+                            </div>
                         </div>
-                        <div class="faq__inner-pages">
-                            <div class="faq__circle  faq__active-circle"></div>
-                            <div class="faq__circle"></div>
-                            <div class="faq__circle"></div>
+                        <div class="reviews__inner-pages">
+                            <div class="reviews__circle  reviews__active-circle"></div>
+                            <div class="reviews__circle"></div>
+                            <div class="reviews__circle"></div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="faq__background-decor">
+            <div class="reviews__background-decor">
                 <img src="assets/about/subtract-2.png" alt="">
             </div>
         </section>
@@ -464,6 +503,8 @@
         </footer>
     </div>
 
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/slick.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

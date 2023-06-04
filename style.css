@@ -368,7 +368,6 @@ ol {
 .shop__wines {
     width: 100%;
     margin-top: 150px;
-    padding: 0 45px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -380,6 +379,7 @@ ol {
 
 .shop__product-img-main {
     position: absolute;
+    z-index: 102200;
     top: -50%;
     left: 32%;
 }
@@ -402,24 +402,51 @@ ol {
     color: #FF543D;
 }
 
-.shop__btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    background-color: #FF543D;
-    color: #FFF;
-    font-size: 24px;
-}
-
-.shop__btn:hover {
-    background-color: #e24b37;
-}
-
 .shop-margin-bottom {
     margin-bottom: 400px;
+}
+
+
+.shop .slick-slider {
+    display: flex;
+}
+
+.shop .slick-track {
+    top: 160px;
+}
+
+.shop .slick-list {
+    height: 555px;
+    margin: 0 45px;
+}
+
+.shop .slick-arrow {
+    display: block;
+    min-width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    background-color: #FF543D;
+}
+
+.shop .slick-arrow:hover {
+    background-color: #e24b37;
+    cursor: pointer;
+}
+
+/* background: url("assets/shop/") */
+
+.shop .slick-prev {
+    background-image: url("assets/shop/shop__btn-arrow-left.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.shop .slick-next {
+    background-image: url("assets/shop/shop__btn-arrow-right.png");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
@@ -611,9 +638,9 @@ ol {
 
 
 
-/* FAQ */
+/* Reviews */
 
-.faq {
+.reviews {
     position: relative;
     z-index: 10;
     display: flex;
@@ -621,11 +648,16 @@ ol {
     justify-content: space-between;
 }
 
-.faq__man-bg {
+.reviews__man-bg {
     margin-right: 60px;
 }
 
-.faq__inner-title {
+.reviews__slider {
+    max-width: 645px;
+    display: flex;
+}
+
+.reviews__inner-title {
     max-width: 645px;
     margin-bottom: 45px;
     font-style: normal;
@@ -634,12 +666,12 @@ ol {
     line-height: 67px;
 }
 
-.faq__inner-img {
+.reviews__inner-img {
     margin-bottom: 35px;
 }
 
-.faq__inner-comment {
-    max-width: 645px;
+.reviews__inner-comment {
+    max-width: 600px;
     margin-bottom: 30px;
     font-style: normal;
     font-weight: 300;
@@ -648,7 +680,7 @@ ol {
     letter-spacing: 0.04em;
 }
 
-.faq__inner-autor {
+.reviews__inner-autor {
     margin-bottom: 10px;
     font-style: normal;
     font-weight: 400;
@@ -656,44 +688,59 @@ ol {
     line-height: 36px;
 }
 
-.faq__inner-rating {
+.reviews__inner-rating {
     margin-bottom: 60px;
+    display: flex;
 }
 
-.faq__inner-rating-star {
+.reviews__inner-rating-star {
     margin-right: 5px;
 }
 
-.faq__inner-rating-star:last-child {
+.reviews__inner-rating-star-nonactive {
+    opacity: 0.2;
+}
+
+.reviews__inner-rating-star:last-child {
     margin: 0;
 }
 
-.faq__background-decor {
+.reviews__background-decor {
     position: absolute;
     top: -145px;
     left: 0;
     z-index: 0;
 }
 
-.faq__inner-pages {
+.reviews__inner-pages {
     display: flex;
 }
 
-.faq__circle {
+.slick-dots {
+    display: flex;
+}
+
+.reviews .slick-dots li {
     width: 12px;
     height: 12px;
     margin-right: 18px;
+    list-style-type: none;
+}
+
+.reviews .slick-dots li button {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin-right: 18px;
+    font-size: 0;
     border-radius: 50%;
-    background: #FF543D;
-    opacity: 0.1;
+    border: none;
+    cursor: pointer;
 }
 
-.faq__circle:last-child {
-    margin: 0;
-}
-
-.faq__active-circle {
-    opacity: 1;
+.slick-active button {
+    background-color: #FF543D;
 }
 
 
