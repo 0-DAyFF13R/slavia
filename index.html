@@ -25,12 +25,12 @@
                 <div class="header__inner">
                     <h2 class="header__logo">Slavia</h2>
                     <div class="header__nav-block">
-                        <nav class="header__nav">
-                            <a class="header__nav-link  header__nav-link_active" href="#">Home</a>
-                            <a class="header__nav-link" href="#">About</a>
-                            <a class="header__nav-link" href="#">Shop</a>
-                            <a class="header__nav-link" href="#">Events</a>
-                            <a class="header__nav-link" href="#">Contact</a>
+                        <nav class="header__nav" id="nav">
+                            <a class="header__nav-link  header__nav-link_active" data-scroll="#about" href="#">About</a>
+                            <a class="header__nav-link" data-scroll="#shop" href="#">Shop</a>
+                            <a class="header__nav-link" data-scroll="#events" href="#">Events</a>
+                            <a class="header__nav-link" data-scroll="#reviews" href="#">Reviews</a>
+                            <a class="header__nav-link" data-scroll="#contact" href="#">Contact</a>
                         </nav>
                         <div>
                             <a class="header__nav-search  header__ico-filter" href="#"><img src="assets/search.svg" alt=""></a>
@@ -49,7 +49,7 @@
 
         <!-- Home -->
 
-        <section class="section">
+        <section class="section" id="home" data-scrollspy="#home">
             <div class="container">
                 <div class="home">
                     <div>
@@ -105,7 +105,7 @@
 
         <!-- About -->
 
-        <section class="section  relative">
+        <section class="section  relative" id="about" data-scrollspy="#about">
             <div class="container">
                 <div class="about">
                     <div>
@@ -133,7 +133,7 @@
 
         <!-- Shop -->
 
-        <section class="section  shop-margin-bottom">
+        <section class="section  shop-margin-bottom" id="shop" data-scrollspy="#shop">
             <div class="container">
                 <div class="shop">
                     <div class="section__text-block">
@@ -274,7 +274,7 @@
 
         <!-- Events -->
 
-        <section class="section">
+        <section class="section" id="events" data-scrollspy="#events">
             <div class="container">
                 <div class="events">
                     <div class="section__text-block">
@@ -350,7 +350,7 @@
 
         <!-- Reviews -->
 
-        <section class="section  relative">
+        <section class="section  relative" id="reviews" data-scrollspy="#reviews">
             <div class="container">
                 <div class="reviews">
                     <div class="reviews__man-bg">
@@ -413,7 +413,7 @@
 
         <!-- Sponsors -->
 
-        <section class="section  mb-bottom">
+        <section class="section  mb-bottom" data-scrollspy="#contact">
             <div class="container">
                 <div class="sponsors">
                     <h2 class="sponsors__title">Our <span class="bold-text">Sponsored</span></h2>
@@ -433,7 +433,7 @@
 
         <!-- Footer -->
 
-        <footer class="relative">
+        <footer class="relative" id="contact">
             <div class="container">
                 <div class="footer">
                     <div class="footer__inner">
