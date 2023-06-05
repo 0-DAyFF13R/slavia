@@ -4,7 +4,6 @@ $(function() {
 
     let navToggle = $('#navToggle');
     let nav = $('#hiddenClick');
-    let navClick = $('.header__nav-link');
     let headerColor = $('#headerColor');
 
     navToggle.on('click', function(event) {
@@ -15,13 +14,6 @@ $(function() {
         nav.toggleClass('header_transform');
         navToggle.toggleClass('active');
         headerColor.toggleClass('header_dark-burger');
-    });
-
-    navClick.on('click', function() {
-        $("body").toggleClass('show-nav');
-        nav.toggleClass('header_transform');
-        headerColor.toggleClass('header_dark-burger');
-        navToggle.toggleClass('active');
     });
 
     $(window).on("resize", function() {
@@ -75,6 +67,11 @@ $(function() {
         
         let scrollElPos = $(scrollEl).offset().top;
         console.log(scrollElPos);
+
+        $("body").removeClass('show-nav');
+        navToggle.removeClass('active');
+        nav.removeClass('header_transform');
+        headerColor.removeClass('header_dark-burger');
 
         $("html, body").animate({
             scrollTop: scrollElPos - headerH
