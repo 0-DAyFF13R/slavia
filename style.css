@@ -82,6 +82,10 @@ ol {
     top: 830px;
 }
 
+body.show-nav {
+    overflow: hidden;
+}
+
 
 
 /* Orange button */
@@ -132,7 +136,7 @@ ol {
 }
 
 .section__subtitle {
-    width: 700px;
+    max-width: 700px;
     margin-top: 5px;
     margin-bottom: 60px;
     text-align: center;
@@ -181,6 +185,12 @@ ol {
 .header_dark {
     color: #FFF;
     background-color: #00000071;
+}
+
+.header_dark-burger {
+    background-color: rgba(0, 0, 0, .85);
+    color: #FFF;
+    transition: .1s ease-out;
 }
 
 .header__inner {
@@ -235,6 +245,65 @@ ol {
 
 
 
+/* Burger */
+
+.burger {
+    width: 30px;
+    height: 23px;
+    display: none;
+    position: relative;
+    border: 0;
+    padding: 0;
+    font-size: 0;
+    color: transparent;
+    background: transparent;
+}
+
+.burger__line {
+    display: block;
+    width: 30px;
+    height: 2px;
+    margin: 3px 0;
+    background-color: #fff;
+
+    transition: transform .2s ease-out, opacity .2s ease-out;
+}
+
+.burger__line:nth-child(1) {
+    width: 20px;
+    margin-left: auto;
+}
+
+.burger__line:nth-child(1),
+.burger__line:nth-child(3) {
+    transform-origin: right;
+    transition: width .2s ease-out;
+}
+
+.burger.active .burger__line:nth-child(1),
+.burger.active .burger__line:nth-child(3) {
+    width: 0;
+}
+
+.burger.active .burger__line:nth-child(2),
+.burger.active .burger__line:nth-child(4) {
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    transform-origin: center;
+}
+
+.burger.active .burger__line:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.burger.active .burger__line:nth-child(4) {
+    transform: rotate(-45deg);
+}
+
+
+
 /* Home */
 
 .home {
@@ -265,7 +334,6 @@ ol {
 
 .home__wine-img {
     width: 530px;
-    height: 800px;
 }
 
 
@@ -279,6 +347,7 @@ ol {
 }
 
 .feature__inner-block {
+    margin: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -961,4 +1030,171 @@ footer .container {
     height: 5px;
     background-color: #fff;
     border-radius: 50%;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 1325px) {
+    /* Reviews */
+
+    .reviews__man-bg img {
+        width: 520px;
+    }
+
+    .reviews__background-decor img {
+        width: 500px;
+    }
+
+    .reviews__inner-comment {
+        width: 550px;
+    }
+}
+
+@media (max-width: 1220px) {
+    /* Home */
+
+    .home__wine-img {
+        width: 420px;
+    }
+
+    .bg-decor {
+        right: -90px;
+    }
+
+    .bg-decor img {
+        width: 820px;
+    }
+
+
+
+    /* Feature */
+
+    .feature__inner {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .feature__inner-block {
+        width: 33%;
+    }
+
+
+
+    /* About */
+
+    .about__img {
+        width: 360px;
+        margin-right: 25px;
+    }
+
+    .about__background-decor {
+        top: -25px;
+    }
+
+    .about__background-decor img {
+        width: 420px;
+    }
+
+
+
+    /* Statistic */
+
+    .statistic__img-block img {
+        width: 410px;
+    }
+
+    .statistic__background-decor img {
+        width: 570px;
+    }
+
+
+
+    /* Footer */
+
+    footer {
+        height: 715px;
+    }
+
+    .footer__inner {
+        width: 900px;
+        flex-wrap: wrap;
+        justify-content: space-between
+    }
+
+    .footer__block {
+        margin: 0;
+        flex-basis: 50%;
+    }
+}
+
+
+@media (max-width: 840px) {
+    /* Header */
+
+    .header {
+        height: 50px;
+    }
+
+    .header__logo {
+        font-size: 24px;
+        position: relative;
+    }
+
+    .header__nav-block {
+        width: 100%;
+        height: auto;
+        min-height: calc(100vh - 50px);
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, .80);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: transform .2s ease-out;
+    }
+
+    .header_transform {
+        transform: translateX(0);
+    }
+
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header__nav-link {
+        display: block;
+        padding: 15px;
+        margin: 0;
+        text-align: right;
+    }
+
+    .header__nav-link:last-child {
+        margin: 0;
+    }
+
+    .header__nav-link_active {
+        color: #FFF;
+        background-color: #ff543de0;
+    }
+
+    .header__nav-buttons {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        margin-right: 10px;
+    }
+
+    .header__nav-buttons a {
+        margin: 10px 0 10px 0;
+    }
+
+    .burger {
+        display: block;
+    }
 }

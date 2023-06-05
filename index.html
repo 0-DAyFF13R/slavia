@@ -20,11 +20,11 @@
 
         <!-- Header -->
 
-        <header class="header header_dark">
+        <header class="header header_dark" id="headerColor">
             <div class="container">
                 <div class="header__inner">
                     <h2 class="header__logo">Slavia</h2>
-                    <div class="header__nav-block">
+                    <div class="header__nav-block  hidden" id="hiddenClick">
                         <nav class="header__nav" id="nav">
                             <a class="header__nav-link  header__nav-link_active" data-scroll="#about" href="#">About</a>
                             <a class="header__nav-link" data-scroll="#shop" href="#">Shop</a>
@@ -32,11 +32,17 @@
                             <a class="header__nav-link" data-scroll="#reviews" href="#">Reviews</a>
                             <a class="header__nav-link" data-scroll="#contact" href="#">Contact</a>
                         </nav>
-                        <div>
+                        <div class="header__nav-buttons">
                             <a class="header__nav-search  header__ico-filter" href="#"><img src="assets/search.svg" alt=""></a>
                             <a class="header__ico-filter" href="#"><img src="assets/shop.svg" alt=""></a>
                         </div>
                     </div>
+                    <button class="burger" type="button" id="navToggle">
+                        <span class="burger__line">1</span>
+                        <span class="burger__line">2</span>
+                        <span class="burger__line">3</span>
+                        <span class="burger__line">4</span>
+                    </button>
                 </div>
             </div>
         </header>
@@ -392,7 +398,7 @@
                                     <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
                                     <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
                                     <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
-                                    <img class="reviews__inner-rating-star-nonactive" src="assets/reviews/star.png" alt="">
+                                    <img class="reviews__inner-rating-star" src="assets/reviews/star.png" alt="">
                                 </div>
                             </div>
                         </div>

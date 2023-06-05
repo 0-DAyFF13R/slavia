@@ -1,4 +1,37 @@
 $(function() {
+    /* Nav Toggle on mobile
+    ======================================*/
+
+    let navToggle = $('#navToggle');
+    let nav = $('#hiddenClick');
+    let navClick = $('.header__nav-link');
+    let headerColor = $('#headerColor');
+
+    navToggle.on('click', function(event) {
+        event.preventDefault();
+
+        $("body").toggleClass('show-nav');
+        $(this).toggleClass('burger_active');
+        nav.toggleClass('header_transform');
+        navToggle.toggleClass('active');
+        headerColor.toggleClass('header_dark-burger');
+    });
+
+    navClick.on('click', function() {
+        $("body").toggleClass('show-nav');
+        nav.toggleClass('header_transform');
+        headerColor.toggleClass('header_dark-burger');
+        navToggle.toggleClass('active');
+    });
+
+    $(window).on("resize", function() {
+        $("body").removeClass('show-nav');
+        navToggle.removeClass('active');
+        nav.removeClass('header_transform');
+    });
+
+
+
     /* Shop Slider
     ===================================== */
     let multipleItems = $("#shopSlider");
